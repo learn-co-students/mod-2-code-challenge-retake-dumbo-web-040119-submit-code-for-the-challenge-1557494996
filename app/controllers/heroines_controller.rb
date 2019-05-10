@@ -2,4 +2,34 @@ class HeroinesController < ApplicationController
   def index
     @heroines = Heroine.all
   end
+
+  def show
+    @heroine = Heroine.find(params[:id])
+  end
+
+  def new
+    @heroine = Heroine.new
+  end
+
+  def create
+    @heroine = Heroine.create(hero_params)
+    if @heroine.valid?
+      redirect_to heroine
+     else
+        render "new"
+      end
+  end
+
+    def update
+         @heroine = Heroine.find(params[:id])
+         @heroine.update(hero_params)
+         @heroine.save
+         redirect_to @heroines
+    end
+
+    private
+    
+    def hero_params
+      params.require(:heroine).permit(:name, :super_name, :power_id)
+  end
 end
