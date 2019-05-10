@@ -1,0 +1,14 @@
+
+<h2><%= @heroine.super_name %></h2>
+
+<br><br><br>
+<h3><strong>Name: </strong><%= @heroine.name %></h3>
+<h3><strong> Power: </strong>
+<%=link_to "#{@heroine.power.name}", power_path(@heroine.power)%></h3>
+
+<br><br>
+
+
+<br>
+<br>
+<%= link_to "Index Page of SuperHeroes", heroines_path %>
