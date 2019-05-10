@@ -1,0 +1,10 @@
+<h1>Heroine's Details</h1>
+
+<li>Super Name: <%=@heroine.super_name%></li>
+<li>Name: <%=@heroine.name%></li>
+<br>
+<p>Power Name: <%=link_to "#{@heroine.power.name}", power_path(@heroine.power)%></p>
+
+<hr>
+
+<%= button_to "Back to List", heroines_path, method: :get%>
