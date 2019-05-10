@@ -1,0 +1,11 @@
+ <%# <% @heroine.errors.full_messages do |message|%>
+ <%# <h4><%= message %> 
+ <%# <% end %>
+ 
+ <h1> <%= @heroine.name %>'s profile! </h1>
+ <h2>   <%= @heroine.super_name %> </h2>
+
+
+
+ <h3>   POWER :<%= link_to @heroine.power.name, @heroine.power %> </h3>
+<%= link_to "Return to All Heroines", heroines_path %>
