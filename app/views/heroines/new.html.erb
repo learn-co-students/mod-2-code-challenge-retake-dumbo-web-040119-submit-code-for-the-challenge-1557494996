@@ -1,20 +1,30 @@
 <h1>Create Heroine:</h1>
 
-<% @heroine.errors.full_messages.each do |message| %>
-  <%= message %>
-<% end %>
+<ol>
+  <% @heroine.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+</ol>
 
-<%= form_for @heroine do |f| %>
+<ul>
+  <%= form_for @heroine do |f| %>
 
-<%= f.label :name %>
-<%= f.text_field :name %>
+  <li>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </li>
 
-<%= f.label :super_name %>
-<%= f.text_field :super_name %>
+  <li>
+    <%= f.label :super_name %>
+    <%= f.text_field :super_name %>
+  </li>
 
-<%= f.label :power_id %>
-<%= f.collection_select :power_id, Power.all, :id, :name %>
+  <li>
+    <%= f.label :power_id %>
+    <%= f.collection_select :power_id, Power.all, :id, :name %>
+  </li>
 
-<%= f.submit %>
+  <%= f.submit %>
 
-<% end %>
+  <% end %>
+</ul>
