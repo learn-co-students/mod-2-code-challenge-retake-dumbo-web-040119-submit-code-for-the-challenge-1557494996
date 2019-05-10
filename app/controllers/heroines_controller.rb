@@ -3,6 +3,16 @@ class HeroinesController < ApplicationController
     @heroines = Heroine.all
   end
 
+  #Search Bar Bonus Task Trial and Error
+  # def index
+  #   @heroines = if params[:name]
+  #   Powers.where('name LIKE ?', "%#{params[:name]}%")
+  #   else
+  #   @heroines = Heroine.all
+  #   end
+  # end
+
+
   def show
     @heroine = Heroine.find(params[:id])
   end
