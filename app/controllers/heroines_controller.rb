@@ -17,7 +17,7 @@ class HeroinesController < ApplicationController
         redirect_to @heroine
       else
         render :new
-      end 
+      end
   end
 
 
